@@ -1,0 +1,132 @@
+/* =========================
+   Base
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  color: #222;
+  background: #ffffff;
+}
+
+/* =========================
+   Layout
+========================= */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+  margin-bottom: 48px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* =========================
+   Navigation
+========================= */
+nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+/* =========================
+   Sections
+========================= */
+section {
+  margin-bottom: 72px;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+section p {
+  max-width: 720px;
+}
+
+/* =========================
+   Buttons
+========================= */
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  padding-top: 48px;
+  border-top: 1px solid #eee;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .container {
+    padding: 48px 20px;
+  }
+}
