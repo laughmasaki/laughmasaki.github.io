@@ -13,6 +13,15 @@
 
     <header>
       <h1>Laugh Maker</h1>
+      <div class="slider">
+        <img src="images/SHOP2.png" class="slide active" alt="">
+        <img src="images/SHOP1.png" class="slide" alt="">
+        <img src="images/SHOP3.png" class="slide" alt="">
+        <img src="images/TOP4.PNG" class="slide active" alt="">
+        <img src="images/TOP3.PNG" class="slide" alt="">
+        <img src="images/TOP2.PNG" class="slide" alt="">
+    </div>
+
       <p>
         イラスト・デザイン・Web制作まで。<br>
         アイデアを「かたち」にする個人クリエイターです。
@@ -60,5 +69,16 @@
     </footer>
 
   </div>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4000); // 4秒ごと
+</script>
+
 </body>
 </html>
