@@ -215,3 +215,27 @@ footer {
     font-size: 1.8rem;
   }
 }
+/* =========================
+   Access / Map
+========================= */
+.access {
+  margin-bottom: 72px;
+}
+
+.access-text {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.map {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* PCで少し大きく */
+@media (min-width: 768px) {
+  .map iframe {
+    height: 420px;
+  }
+}
