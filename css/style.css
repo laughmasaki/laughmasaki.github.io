@@ -26,22 +26,44 @@ body {
 }
 
 /* =========================
-   Header
+   Hero Section
 ========================= */
-header {
-  margin-bottom: 48px;
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 64px 32px;
+  margin-bottom: 64px;
+  background: #f7f7f7;
+  border-radius: 24px;
 }
 
-header h1 {
+/* Hero Text */
+.hero-text {
+  text-align: center;
+  max-width: 520px;
+}
+
+.hero-text h1 {
   font-size: 2.2rem;
-  margin: 0 0 8px;
-  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
 }
 
-header p {
-  font-size: 1rem;
-  color: #666;
-  margin: 0;
+.hero-text .catch {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* =========================
@@ -91,17 +113,17 @@ section p {
 ========================= */
 .button {
   display: inline-block;
-  margin-top: 16px;
-  padding: 12px 24px;
+  padding: 10px 22px;
   background: #222;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 999px;
   font-size: 0.9rem;
+  transition: opacity 0.2s ease;
 }
 
 .button:hover {
-  opacity: 0.85;
+  opacity: 0.75;
 }
 
 /* =========================
@@ -115,62 +137,81 @@ footer {
 }
 
 /* =========================
-   Responsive
-========================= */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  nav {
-    gap: 12px;
-  }
-
-  .container {
-    padding: 48px 20px;
-  }
-}
-/* =========================
    Illustration Grid
 ========================= */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 24px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
 
-    .grid img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
+.grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
 /* =========================
    Image Slider
 ========================= */
-    .slider {
-        position: relative;
-        width: 100%;
-        max-width: 300px;
-        aspect-ratio: 1 / 1;
-        margin: 0 auto 48px;
-        overflow: hidden;
-        border-radius: 16px;
-    }
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 16px;
+}
 
-    .slide {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        background: #f2f2f2;
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f2f2f2;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
 
-        opacity: 0;
-        transition: opacity 1s ease;
-    }
+.slide.active {
+  opacity: 1;
+}
 
-    .slide.active {
-        opacity: 1;
-    }
+/* =========================
+   Responsive（PC）
+========================= */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+    padding: 80px 64px;
+  }
 
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+
+  .slider {
+    max-width: 420px;
+  }
+}
+
+/* =========================
+   Responsive（Mobile）
+========================= */
+@media (max-width: 600px) {
+  .container {
+    padding: 48px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+}

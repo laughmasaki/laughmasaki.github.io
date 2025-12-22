@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Laugh Maker | イラスト・デザイン・Web制作</title>
-  <meta name="description" content="Laugh Makerは、イラスト・デザイン・Web制作まで対応する個人クリエイターです。個人・小規模事業者向けに柔軟な制作を行っています。">
+  <title>Laugh Creators Studio | イラスト・デザイン・Web制作</title>
+  <meta name="description" content="Laugh Creators Studioは、イラスト・デザイン・Web制作まで対応する個人クリエイターです。個人・小規模事業者向けに柔軟な制作を行っています。">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,21 +11,33 @@
 <body>
   <div class="container">
 
-    <header>
-      <h1>Laugh Maker</h1>
+    <!-- Hero -->
+    <header class="hero">
       <div class="slider">
         <img src="images/SHOP2.png" class="slide active" alt="">
         <img src="images/SHOP1.png" class="slide" alt="">
         <img src="images/SHOP3.png" class="slide" alt="">
-        <img src="images/TOP4.PNG" class="slide active" alt="">
+        <img src="images/TOP4.PNG" class="slide" alt="">
         <img src="images/TOP3.PNG" class="slide" alt="">
         <img src="images/TOP2.PNG" class="slide" alt="">
-    </div>
+      </div>
 
-      <p>
-        イラスト・デザイン・Web制作まで。<br>
-        アイデアを「かたち」にする個人クリエイターです。
-      </p>
+      <div class="hero-text">
+        <h1>Laugh Creators Studio</h1>
+
+        <p class="catch">
+          イラスト・デザイン・Web制作まで。<br>
+          ご依頼者さまの「Laugh」を「Make」する。<br>
+          ラフメイカーを目指す個人クリエイターです。
+        </p>
+
+        <!-- Hero Buttons -->
+        <div class="hero-buttons">
+          <a href="illustration.html" class="button">Illustration</a>
+          <a href="engineering.html" class="button">Engineering</a>
+          <a href="shop.html" class="button">Shop</a>
+        </div>
+      </div>
     </header>
 
     <nav>
@@ -38,9 +50,9 @@
     <section>
       <h2>About</h2>
       <p>
-        Laugh Maker は、イラスト・デザイン制作から
-        Webエンジニアリングまで幅広く対応する個人事業です。<br>
-        個人の方から小規模事業者さままで、
+        Laugh Creators Studio は、イラスト・デザイン制作から<br>
+        Webデザインまで幅広く対応する個人事業です。<br>
+        個人の方から小規模事業者さままで、<br>
         ご要望に合わせた柔軟な制作を行っています。
       </p>
     </section>
@@ -65,20 +77,26 @@
     </section>
 
     <footer>
-      © Laugh Maker
+      © Laugh Creators Studio
     </footer>
 
   </div>
-<script>
-  const slides = document.querySelectorAll('.slide');
-  let current = 0;
 
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 1500); // 4秒ごと
-</script>
+  <!-- Slider Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.slide');
+      let current = 0;
+
+      if (slides.length <= 1) return;
+
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 3000);
+    });
+  </script>
 
 </body>
 </html>
