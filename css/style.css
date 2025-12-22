@@ -158,7 +158,6 @@ footer {
         border-radius: 16px;
     }
 
-
     .slide {
         position: absolute;
         inset: 0;
@@ -166,9 +165,12 @@ footer {
         height: 100%;
         object-fit: contain;
         background: #f2f2f2;
-    }
 
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
 
     .slide.active {
         opacity: 1;
     }
+
