@@ -34,10 +34,9 @@ const id = params.get("id");
 if (!id) {
   document.getElementById("topic-title").textContent = "記事が見つかりません";
 } else {
-    fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}?limit=3&orders=-publishedAt`, {
+  fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}/${id}`, {
     headers: { "X-MICROCMS-API-KEY": API_KEY }
-    })
-
+  })
   .then(res => res.json())
   .then(data => {
     document.getElementById("topic-title").textContent = data.title;
