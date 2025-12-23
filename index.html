@@ -69,6 +69,14 @@
       <a class="button" href="contact.html">お問い合わせはこちら</a>
     </section>
 
+    <section class="topics">
+        <h2>Topics</h2>
+
+        <ul class="topics-list" id="topics-list">
+            <!-- microCMS から JS で自動挿入 -->
+        </ul>
+    </section>
+
     <section class="access">
         <h2>Access</h2>
 
@@ -97,21 +105,52 @@
 
   </div>
 
-  <!-- Slider Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const slides = document.querySelectorAll('.slide');
-      let current = 0;
+    <!-- Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.slide');
+        let current = 0;
 
-      if (slides.length <= 1) return;
+        if (slides.length <= 1) return;
 
-      setInterval(() => {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-      }, 3000);
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 3000);
+        });
+    </script>
+
+    <script>
+    const API_KEY = "vKaatSkfGiIWO0m9gfz0uNv9qj0trrYeXq4W";
+    const ENDPOINT = "https://laugh.microcms.io/api/v1/news";
+
+    fetch(ENDPOINT, {
+        headers: {
+        "X-MICROCMS-API-KEY": API_KEY
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        const list = document.getElementById("topics-list");
+        if (!list) return;
+
+        data.contents.forEach(item => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            <span class="date">${item.publishedAt.slice(0, 10)}</span>
+            <span class="label">${item.category}</span>
+            <span class="text">${item.title}</span>
+        `;
+
+        list.appendChild(li);
+        });
+    })
+    .catch(err => {
+        console.error("Topics取得エラー:", err);
     });
-  </script>
+    </script>
 
 </body>
 </html>
