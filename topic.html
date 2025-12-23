@@ -15,9 +15,7 @@
       <p id="topic-date" style="color:#888;"></p>
     </header>
 
-    <section id="topic-content">
-      <!-- 本文が入る -->
-    </section>
+    <section id="topic-content"></section>
 
     <a href="index.html" class="button">← Topへ戻る</a>
 
@@ -31,18 +29,28 @@ const ENDPOINT = "news";
 const params = new URLSearchParams(location.search);
 const id = params.get("id");
 
+const titleEl = document.getElementById("topic-title");
+const dateEl = document.getElementById("topic-date");
+const contentEl = document.getElementById("topic-content");
+
 if (!id) {
-  document.getElementById("topic-title").textContent = "記事が見つかりません";
+  titleEl.textContent = "記事が見つかりません";
 } else {
   fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}/${id}`, {
     headers: { "X-MICROCMS-API-KEY": API_KEY }
   })
-  .then(res => res.json())
+  .then(res => {
+    if (!res.ok) throw new Error(res.status);
+    return res.json();
+  })
   .then(data => {
-    document.getElementById("topic-title").textContent = data.title;
-    document.getElementById("topic-date").textContent =
-      data.publishedAt.slice(0,10);
-    document.getElementById("topic-content").innerHTML = data.content;
+    titleEl.textContent = data.title;
+    dateEl.textContent = data.publishedAt.slice(0,10);
+    contentEl.innerHTML = data.content;
+  })
+  .catch(err => {
+    titleEl.textContent = "記事の読み込みに失敗しました";
+    contentEl.textContent = "Error: " + err;
   });
 }
 </script>
