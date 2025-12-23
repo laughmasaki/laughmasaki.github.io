@@ -124,9 +124,10 @@
     const SERVICE_ID = "laugh";
     const ENDPOINT = "news";
 
-    fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}`, {
+    fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}?limit=3&orders=-publishedAt`, {
     headers: { "X-MICROCMS-API-KEY": API_KEY }
     })
+
     .then(res => res.json())
     .then(data => {
     const list = document.getElementById("topics-list");
