@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Topics | Laugh Creators Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1 id="topic-title">Loading...</h1>
+      <p id="topic-date" style="color:#888;"></p>
+    </header>
+
+    <section id="topic-content">
+      <!-- 本文が入る -->
+    </section>
+
+    <a href="index.html" class="button">← Topへ戻る</a>
+
+  </div>
+
+<script>
+const API_KEY = "ここにAPIキー";
+const SERVICE_ID = "laugh";
+const ENDPOINT = "news";
+
+const params = new URLSearchParams(location.search);
+const id = params.get("id");
+
+if (!id) {
+  document.getElementById("topic-title").textContent = "記事が見つかりません";
+} else {
+  fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}/${id}`, {
+    headers: { "X-MICROCMS-API-KEY": API_KEY }
+  })
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("topic-title").textContent = data.title;
+    document.getElementById("topic-date").textContent =
+      data.publishedAt.slice(0,10);
+    document.getElementById("topic-content").innerHTML = data.content;
+  });
+}
+</script>
+
+</body>
+</html>

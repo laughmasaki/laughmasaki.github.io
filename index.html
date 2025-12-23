@@ -69,13 +69,11 @@
       <a class="button" href="contact.html">お問い合わせはこちら</a>
     </section>
 
-    <section class="topics">
-        <h2>Topics</h2>
-
-        <ul class="topics-list" id="topics-list">
-            <!-- microCMS から JS で自動挿入 -->
-        </ul>
+    <section>
+    <h2>Topics</h2>
+    <ul id="topics-list"></ul>
     </section>
+
 
     <section class="access">
         <h2>Access</h2>
@@ -122,35 +120,33 @@
     </script>
 
     <script>
-    const API_KEY = "vKaatSkfGiIWO0m9gfz0uNv9qj0trrYeXq4W";
-    const ENDPOINT = "https://laugh.microcms.io/api/v1/news";
+    const API_KEY = "ここにAPIキー";
+    const SERVICE_ID = "laugh";
+    const ENDPOINT = "news";
 
-    fetch(ENDPOINT, {
-        headers: {
-        "X-MICROCMS-API-KEY": API_KEY
-        }
+    fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}`, {
+    headers: { "X-MICROCMS-API-KEY": API_KEY }
     })
     .then(res => res.json())
     .then(data => {
-        const list = document.getElementById("topics-list");
-        if (!list) return;
+    const list = document.getElementById("topics-list");
 
-        data.contents.forEach(item => {
+    data.contents.forEach(item => {
         const li = document.createElement("li");
 
         li.innerHTML = `
-            <span class="date">${item.publishedAt.slice(0, 10)}</span>
-            <span class="label">${item.category}</span>
-            <span class="text">${item.title}</span>
+        <a href="topic.html?id=${item.id}">
+            <strong>${item.title}</strong><br>
+            <small>${item.publishedAt.slice(0,10)}</small><br>
+            <span>${item.summary}</span>
+        </a>
         `;
 
         list.appendChild(li);
-        });
-    })
-    .catch(err => {
-        console.error("Topics取得エラー:", err);
+    });
     });
     </script>
+
 
 </body>
 </html>
