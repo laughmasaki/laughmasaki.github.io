@@ -35,9 +35,16 @@ body {
   gap: 32px;
   padding: 64px 32px;
   margin-bottom: 64px;
-  background: #f7f7f7;
+
+  background: linear-gradient(
+    135deg,
+    #f9f9f9 0%,
+    #f2f2f2 100%
+  );
+
   border-radius: 24px;
 }
+
 
 /* Hero Text */
 .hero-text {
@@ -58,7 +65,9 @@ body {
   color: #333;
 }
 
-/* Hero Buttons */
+/* =========================
+   Hero Buttons
+========================= */
 .hero-buttons {
   display: flex;
   gap: 16px;
@@ -67,29 +76,26 @@ body {
 }
 
 /* =========================
-   Navigation
+   Buttons
 ========================= */
-nav {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 64px;
-}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-nav a {
-  text-decoration: none;
-  color: #222;
-  padding: 10px 16px;
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-}
+  width: 160px;
+  padding: 10px 0;
 
-nav a:hover {
   background: #222;
   color: #fff;
-  border-color: #222;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.75;
 }
 
 /* =========================
@@ -106,24 +112,6 @@ section h2 {
 
 section p {
   max-width: 720px;
-}
-
-/* =========================
-   Buttons
-========================= */
-.button {
-  display: inline-block;
-  padding: 10px 22px;
-  background: #222;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  transition: opacity 0.2s ease;
-}
-
-.button:hover {
-  opacity: 0.75;
 }
 
 /* =========================
@@ -180,42 +168,6 @@ footer {
 }
 
 /* =========================
-   Responsive（PC）
-========================= */
-@media (min-width: 768px) {
-  .hero {
-    flex-direction: row;
-    justify-content: center;
-    gap: 64px;
-    padding: 80px 64px;
-  }
-
-  .hero-text {
-    text-align: left;
-  }
-
-  .hero-buttons {
-    justify-content: flex-start;
-  }
-
-  .slider {
-    max-width: 420px;
-  }
-}
-
-/* =========================
-   Responsive（Mobile）
-========================= */
-@media (max-width: 600px) {
-  .container {
-    padding: 48px 20px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-}
-/* =========================
    Access / Map
 ========================= */
 .access {
@@ -231,13 +183,6 @@ footer {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-/* PCで少し大きく */
-@media (min-width: 768px) {
-  .map iframe {
-    height: 420px;
-  }
 }
 
 /* =========================
@@ -265,4 +210,48 @@ footer {
 
 #topics-list a:hover {
   background: #f7f7f7;
+}
+
+/* =========================
+   Responsive（PC）
+========================= */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+    padding: 80px 64px;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 160px);
+    gap: 16px 24px;
+    justify-content: flex-start;
+  }
+
+  .slider {
+    max-width: 420px;
+  }
+
+  .map iframe {
+    height: 420px;
+  }
+}
+
+/* =========================
+   Responsive（Mobile）
+========================= */
+@media (max-width: 600px) {
+  .container {
+    padding: 48px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
 }
