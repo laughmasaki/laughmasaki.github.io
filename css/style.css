@@ -280,3 +280,56 @@ footer {
     font-size: 1.8rem;
   }
 }
+/* =========================
+   Flow List（工程）
+========================= */
+.flow-list {
+  padding-left: 1.2em; /* ol番号位置 */
+}
+
+.flow-list li {
+  position: relative;
+  margin-bottom: 28px;
+  padding-left: 40px; /* アイコン分の余白 */
+  line-height: 1.7;
+}
+
+/* 共通アイコン設定 */
+.flow-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+
+  width: 22px;
+  height: 22px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* 工程別アイコン */
+.flow-list li:nth-child(1)::before {
+  background-image: url("images/zu1.png");
+}
+
+.flow-list li:nth-child(2)::before {
+  background-image: url("images/zu2.png");
+}
+
+.flow-list li:nth-child(3)::before {
+  background-image: url("images/zu3.png");
+}
+
+.flow-list li:nth-child(4)::before {
+  background-image: url("images/zu4.png");
+}
+
+.flow-list li:nth-child(5)::before {
+  background-image: url("images/zu5.png");
+}
+
+.flow-list li:nth-child(6)::before {
+  background-image: url("images/zu6.png");
+}
