@@ -359,4 +359,19 @@ footer {
     height: 64px;
   }
 }
+/* =========================
+   Page Header
+========================= */
+.page-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+/* ヘッダー画像 */
+.header-image {
+  width: 100%;
+  max-width: 520px;   /* ← ここで「少し小さく」制御 */
+  height: auto;      /* ← 縦横比を保持（トリミングなし） */
+  margin-bottom: 24px;
+}
 
