@@ -388,7 +388,7 @@ footer {
 
     background-repeat: repeat-y;
     background-position: left top;
-    background-size: 180px auto; /* ← ここが横幅調整ポイント */
+    background-size: 80px auto; /* ← ここが横幅調整ポイント */
  }
 
 /* =========================
@@ -399,8 +399,8 @@ footer {
     background-image:
       /* 白グラデーション（一番上） */
       linear-gradient(
-        rgba(255,255,255,0.05),
-        rgba(255,255,255,0.05)
+        rgba(255,255,255,0.25),
+        rgba(255,255,255,0.25)
       ),
       /* 左背景 */
       url("../images/webback.png"),
@@ -419,7 +419,7 @@ footer {
 
     background-size:
       auto,
-      180px auto,
-      180px auto;
+      280px auto,
+      280px auto;
   }
 }
