@@ -9,6 +9,36 @@
 </head>
 
 <body class="engineering-bg">
+
+    <!-- ハンバーガーボタン -->
+    <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+
+    <!-- グローバルメニュー -->
+    <nav class="global-menu" id="globalMenu">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="https://laughmaker.theshop.jp/" target="_blank">SHOP ↗</a></li>
+        <li><a href="illustration.html">Illustration</a></li>
+        <li><a href="engineering.html">Web Design</a></li>
+        <li><a href="3ddesign.html">3D Design</a></li>
+
+        <li class="has-sub">
+        <button class="submenu-toggle">お見積もり</button>
+        <ul class="submenu">
+            <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
+            <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
+            <li><span class="disabled">3D制作（準備中）</span></li>
+        </ul>
+        </li>
+
+        <li><a href="contact.html">その他のご相談 / お問い合わせ</a></li>
+    </ul>
+    </nav>
+
   <div class="container">
 
     <header class="page-header">
@@ -175,5 +205,26 @@
     </footer>
 
   </div>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const globalMenu = document.getElementById("globalMenu");
+  const submenuToggle = document.querySelector(".submenu-toggle");
+  const hasSub = document.querySelector(".has-sub");
+
+  if (menuToggle && globalMenu) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      globalMenu.classList.toggle("active");
+    });
+  }
+
+  if (submenuToggle && hasSub) {
+    submenuToggle.addEventListener("click", () => {
+      hasSub.classList.toggle("open");
+    });
+  }
+</script>
+
 </body>
 </html>
