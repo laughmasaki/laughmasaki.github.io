@@ -376,19 +376,37 @@ footer {
 }
 
 /* =========================
-   Engineering Background
+   Engineering Background（Mobile）
 ========================= */
 .engineering-bg {
-  background-image: url("../images/webback.png");
-  background-repeat: repeat-y;          /* 縦に連続 */
-  background-position: right top;       /* 右側固定 */
-  background-size: 240px auto;           /* ← 横幅調整ポイント */
+  .engineering-bg {
+    background-image:
+      linear-gradient(
+        rgba(255,255,255,0.85),
+        rgba(255,255,255,0.85)
+      ),
+      url("../images/webback.png");
+
+    background-repeat: repeat-y;
+    background-position: left top;
+    background-size: 240px auto; /* ← ここが横幅調整ポイント */
+ }
 }
-.engineering-bg {
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,0.3),
-      rgba(255,255,255,0.3)
-    ),
-    url("../images/webback.png");
+
+/* =========================
+   Engineering Background
+========================= */
+@media (min-width: 768px) {
+  .engineering-bg {
+    background-image:
+      linear-gradient(
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.05)
+      ),
+      url("../images/webback.png");
+
+    background-repeat: repeat-y;
+    background-position: right top;
+    background-size: 540px auto; /* ← ここが横幅調整ポイント */
+  }
 }
