@@ -289,8 +289,10 @@ footer {
 
 .flow-list li {
   position: relative;
-  margin-bottom: 152px;
-  padding-left: 281px; /* アイコン分の余白 */
+  width: 96px;
+  height: 96px;
+  padding-left: 120px;
+  margin-bottom: 48px;
   line-height: 1.7;
 }
 
@@ -309,27 +311,27 @@ footer {
   background-size: contain;
 }
 
-/* 工程別アイコン */
+/*アイコン*/
 .flow-list li:nth-child(1)::before {
-  background-image: url("images/zu1.png");
+  background-image: url("../images/zu1.png");
 }
 
 .flow-list li:nth-child(2)::before {
-  background-image: url("images/zu2.png");
+  background-image: url("../images/zu2.png");
 }
 
 .flow-list li:nth-child(3)::before {
-  background-image: url("images/zu3.png");
+  background-image: url("../images/zu3.png");
 }
 
 .flow-list li:nth-child(4)::before {
-  background-image: url("images/zu4.png");
+  background-image: url("../images/zu4.png");
 }
 
 .flow-list li:nth-child(5)::before {
-  background-image: url("images/zu5.png");
+  background-image: url("../images/zu5.png");
 }
 
 .flow-list li:nth-child(6)::before {
-  background-image: url("images/zu6.png");
+  background-image: url("../images/zu6.png");
 }
