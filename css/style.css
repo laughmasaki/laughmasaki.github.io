@@ -283,16 +283,24 @@ footer {
 /* =========================
    Flow List（工程）
 ========================= */
+
 .flow-list {
-  padding-left: 1.2em; /* ol番号位置 */
+  list-style: decimal;
+  padding-left: 1.5em; /* 番号の余白 */
+  margin-top: 24px;
 }
 
+/* 各工程 */
 .flow-list li {
   position: relative;
-  width: 96px;
-  height: 96px;
+
+  /* アイコン分の横余白 */
   padding-left: 120px;
+
+  /* アイコン分の縦余白 */
+  min-height: 96px;
   margin-bottom: 48px;
+
   line-height: 1.7;
 }
 
@@ -301,17 +309,17 @@ footer {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.35em;
+  top: 0;
 
-  width: 152px;
-  height: 281px;
+  width: 96px;
+  height: 96px;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-/*アイコン*/
+/* 工程別アイコン */
 .flow-list li:nth-child(1)::before {
   background-image: url("../images/zu1.png");
 }
@@ -335,3 +343,20 @@ footer {
 .flow-list li:nth-child(6)::before {
   background-image: url("../images/zu6.png");
 }
+
+/* =========================
+   Mobile調整
+========================= */
+@media (max-width: 600px) {
+  .flow-list li {
+    padding-left: 88px;
+    min-height: 72px;
+    margin-bottom: 32px;
+  }
+
+  .flow-list li::before {
+    width: 64px;
+    height: 64px;
+  }
+}
+
