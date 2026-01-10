@@ -1,212 +1,236 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Laugh Creators Studio | イラスト・デザイン・Web制作</title>
-  <meta name="description" content="Laugh Creators Studioは、イラスト・デザイン・Web制作まで対応する個人クリエイターです。個人・小規模事業者向けに柔軟な制作を行っています。">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Laugh Creators Studio | イラスト・デザイン・Web制作</title>
+    <meta name="description" content="Laugh Creators Studioは、イラスト・デザイン・Web制作まで対応する個人クリエイターです。個人・小規模事業者向けに柔軟な制作を行っています。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- ハンバーガーボタン -->
-    <div class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-    </div>
+
+    <!-- ハンバーガーメニュー（button化：アクセシビリティ対応） -->
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="メニューを開く"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <!-- グローバルメニュー -->
-    <nav class="global-menu" id="globalMenu">
-    <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="https://laughmaker.theshop.jp/" target="_blank">SHOP ↗</a></li>
-        <li><a href="illustration.html">Illustration</a></li>
-        <li><a href="engineering.html">Web Design</a></li>
-        <li><a href="3ddesign.html">3D Design</a></li>
+    <nav class="global-menu" id="globalMenu" aria-label="グローバルナビゲーション">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
 
-        <li class="has-sub">
-        <button class="submenu-toggle">お見積もり</button>
-        <ul class="submenu">
-            <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
-            <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
-            <li><span class="disabled">3D制作（準備中）</span></li>
+            <!-- 外部リンクは rel 追加 -->
+            <li>
+                <a href="https://laughmaker.theshop.jp/" target="_blank" rel="noopener noreferrer">
+                    SHOP ↗
+                </a>
+            </li>
+
+            <li><a href="illustration.html">Illustration</a></li>
+            <li><a href="engineering.html">Web Design</a></li>
+            <li><a href="3ddesign.html">3D Design</a></li>
+
+            <li class="has-sub">
+                <button class="submenu-toggle" aria-expanded="false">お見積もり</button>
+                <ul class="submenu">
+                    <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
+                    <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
+                    <li><span class="disabled">3D制作（準備中）</span></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="https://forms.gle/eNZtjmTL7bMWBhfF7">
+                    その他のご相談 / お問い合わせ
+                </a>
+            </li>
         </ul>
-        </li>
-
-        <li><a href="https://forms.gle/eNZtjmTL7bMWBhfF7">その他のご相談 / お問い合わせ</a></li>
-    </ul>
     </nav>
 
-  <div class="container">
+    <div class="container">
 
-    <!-- Hero -->
-    <header class="hero">
-      <div class="slider">
-        <img src="images/SHOP2.png" class="slide active" alt="">
-        <img src="images/SHOP1.png" class="slide" alt="">
-        <img src="images/SHOP3.png" class="slide" alt="">
-        <img src="images/TOP4.PNG" class="slide" alt="">
-        <img src="images/TOP3.PNG" class="slide" alt="">
-        <img src="images/TOP2.PNG" class="slide" alt="">
-      </div>
+        <!-- main：ページの主コンテンツ -->
+        <main>
 
-      <div class="hero-text">
-        <h1>Laugh Creators Studio</h1>
+            <!-- Hero（表示・動作はそのまま） -->
+            <header class="hero">
+                <div class="slider">
+                    <!-- 装飾的スライダーのため alt は空のまま -->
+                    <img src="images/SHOP2.png" class="slide active" alt="">
+                    <img src="images/SHOP1.png" class="slide" alt="">
+                    <img src="images/SHOP3.png" class="slide" alt="">
+                    <img src="images/TOP4.PNG" class="slide" alt="">
+                    <img src="images/TOP3.PNG" class="slide" alt="">
+                    <img src="images/TOP2.PNG" class="slide" alt="">
+                </div>
 
-        <p class="catch">
-          イラスト・デザイン・Web制作まで<br>
-          ご依頼者さまの「Laugh」を「Make」する<br>
-          ラフメイカーを目指しています
-        </p>
+                <div class="hero-text">
+                    <h1>Laugh Creators Studio</h1>
+                    <p class="catch">
+                        イラスト・デザイン・Web制作まで<br>
+                        ご依頼者さまの「Laugh」を「Make」する<br>
+                        ラフメイカーを目指しています
+                    </p>
 
-        <p class="owner">
-        代表：Masaki<br>
-        <a href="mailto:laugh.creators.studio@gmail.com" class="owner-mail">
-        laugh.masaki@gmail.com
-        </a>
-        </p>
+                    <!-- メールアドレス統一 -->
+                    <p class="owner">
+                        代表：Masaki<br>
+                        <a href="mailto:laugh.masaki@gmail.com" class="owner-mail">
+                            laugh.masaki@gmail.com
+                        </a>
+                    </p>
 
-        <!-- Hero Buttons -->
-        <div class="hero-buttons">
-        <a href="https://laughmaker.theshop.jp/" class="button" target="_blank" rel="noopener">Shop</a>
-        <a href="illustration.html" class="button">Illustration</a>
-        <a href="engineering.html" class="button">Web Design</a>
-        <a href="3ddesign.html" class="button">3D Design</a>
-        
-        </div>
-      </div>
-    </header>
+                    <!-- Hero Buttons -->
+                    <div class="hero-buttons">
+                        <a href="https://laughmaker.theshop.jp/" class="button" target="_blank" rel="noopener noreferrer">Shop</a>
+                        <a href="illustration.html" class="button">Illustration</a>
+                        <a href="engineering.html" class="button">Web Design</a>
+                        <a href="3ddesign.html" class="button">3D Design</a>
+                    </div>
+                </div>
+            </header>
 
-    <section>
-      <h2>About</h2>
-      <p>
-        Laugh Creators Studio は、イラスト・デザイン制作から<br>
-        Webデザインまで幅広く対応する個人事業です。<br>
-        個人の方から小規模事業者さままで、<br>
-        ご要望に合わせた柔軟な制作を行っています。
-      </p>
-    </section>
+            <section>
+                <h2>About</h2>
+                <p>
+                    Laugh Creators Studio は、イラスト・デザイン制作から<br>
+                    Webデザインまで幅広く対応する個人事業です。<br>
+                    個人の方から小規模事業者さままで、<br>
+                    ご要望に合わせた柔軟な制作を行っています。
+                </p>
+            </section>
 
-    <section>
-      <h2>Services</h2>
-      <ul>
-        <li>イラスト制作（SNS・Web・印刷物）</li>
-        <li>デザイン制作（ロゴ・バナー・各種ビジュアル）</li>
-        <li>Web制作・開発（小規模サイト・個人事業向け）</li>
-        <li>3D Design（blender）</li>
-        <li>グッズ・物販向けビジュアル制作</li>
-      </ul>
-    </section>
+            <section>
+                <h2>Services</h2>
+                <ul>
+                    <li>イラスト制作（SNS・Web・印刷物）</li>
+                    <li>デザイン制作（ロゴ・バナー・各種ビジュアル）</li>
+                    <li>Web制作・開発（小規模サイト・個人事業向け）</li>
+                    <li>3D Design（blender）</li>
+                    <li>グッズ・物販向けビジュアル制作</li>
+                </ul>
+            </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>
-        ご依頼・ご相談はお気軽にお問い合わせください。<br>
-        内容が固まっていなくても問題ありません。
-      </p>
-      <a class="button" href="https://forms.gle/eNZtjmTL7bMWBhfF7">お問い合わせはこちら</a>
-    </section>
+            <section class="cta">
+                <h2>Contact</h2>
+                <p>
+                    ご依頼・ご相談はお気軽にお問い合わせください。<br>
+                    内容が固まっていなくても問題ありません。
+                </p>
+                <a class="button" href="https://forms.gle/eNZtjmTL7bMWBhfF7">
+                    お問い合わせはこちら
+                </a>
+            </section>
 
-    <section>
-    <h2>Topics</h2>
-    <ul id="topics-list"></ul>
-    </section>
+            <section>
+                <h2>Topics</h2>
+                <ul id="topics-list"></ul>
 
+                <!-- JS無効時フォールバック -->
+                <noscript>
+                    <p>最新情報はJavaScriptを有効にしてご覧ください。</p>
+                </noscript>
+            </section>
 
-    <section class="access">
-        <h2>Access</h2>
+            <section class="access">
+                <h2>Access</h2>
+                <p class="access-text">
+                    活動拠点：神奈川県秦野市周辺<br>
+                    ご依頼内容によりオンライン対応も可能です。
+                </p>
 
-        <p class="access-text">
-            活動拠点：神奈川県秦野市周辺<br>
-            ご依頼内容によりオンライン対応も可能です。
-        </p>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13012.664825120484!2d139.21478612206553!3d35.376333512992495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a90653c1490f%3A0x74f541747dc9919b!2sLaugh%20Creators%20Studio!5e0!3m2!1sja!2sjp!4v1766427584532!5m2!1sja!2sjp"
+                        width="100%"
+                        height="360"
+                        style="border:0;"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
 
-        <div class="map">
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13012.664825120484!2d139.21478612206553!3d35.376333512992495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019a90653c1490f%3A0x74f541747dc9919b!2sLaugh%20Creators%20Studio!5e0!3m2!1sja!2sjp!4v1766427584532!5m2!1sja!2sjp"
-            width="100%"
-            height="360"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </section>
+        </main>
 
+        <footer>
+            © Laugh Creators Studio
+        </footer>
 
-    <footer>
-      © Laugh Creators Studio
-    </footer>
+    </div>
 
-  </div>
-
-    <!-- Slider Script -->
+    <!-- スライダー -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-        const slides = document.querySelectorAll('.slide');
-        let current = 0;
+            const slides = document.querySelectorAll('.slide');
+            let current = 0;
 
-        if (slides.length <= 1) return;
+            if (slides.length <= 1) return;
 
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 3000);
+            setInterval(() => {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+            }, 3000);
         });
     </script>
 
+    <!-- Topics（microCMS） -->
     <script>
-    const API_KEY = "vKaatSkfGiIWO0m9gfz0uNv9qj0trrYeXq4W";
-    const SERVICE_ID = "laugh";
-    const ENDPOINT = "news";
+        const API_KEY = "vKaatSkfGiIWO0m9gfz0uNv9qj0trrYeXq4W";
+        const SERVICE_ID = "laugh";
+        const ENDPOINT = "news";
 
-    fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}?limit=3&orders=-publishedAt`, {
-    headers: { "X-MICROCMS-API-KEY": API_KEY }
-    })
+        fetch(`https://${SERVICE_ID}.microcms.io/api/v1/${ENDPOINT}?limit=3&orders=-publishedAt`, {
+            headers: { "X-MICROCMS-API-KEY": API_KEY }
+        })
+        .then(res => res.json())
+        .then(data => {
+            const list = document.getElementById("topics-list");
 
-    .then(res => res.json())
-    .then(data => {
-    const list = document.getElementById("topics-list");
-
-    data.contents.forEach(item => {
-        const li = document.createElement("li");
-
-        li.innerHTML = `
-        <a href="topic.html?id=${item.id}">
-            <strong>${item.title}</strong><br>
-            <small>${item.publishedAt.slice(0,10)}</small><br>
-            <span>${item.summary}</span>
-        </a>
-        `;
-
-        list.appendChild(li);
-    });
-    });
+            data.contents.forEach(item => {
+                const li = document.createElement("li");
+                li.innerHTML = `
+                    <a href="topic.html?id=${item.id}">
+                        <strong>${item.title}</strong><br>
+                        <small>${item.publishedAt.slice(0,10)}</small><br>
+                        <span>${item.summary}</span>
+                    </a>
+                `;
+                list.appendChild(li);
+            });
+        });
     </script>
 
-<script>
-  const menuToggle = document.getElementById("menuToggle");
-  const globalMenu = document.getElementById("globalMenu");
-  const submenuToggle = document.querySelector(".submenu-toggle");
-  const hasSub = document.querySelector(".has-sub");
+    <!-- メニュー制御 -->
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const globalMenu = document.getElementById("globalMenu");
+        const submenuToggle = document.querySelector(".submenu-toggle");
+        const hasSub = document.querySelector(".has-sub");
 
-  if (menuToggle && globalMenu) {
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
-      globalMenu.classList.toggle("active");
-    });
-  }
+        if (menuToggle && globalMenu) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = menuToggle.classList.toggle("active");
+                globalMenu.classList.toggle("active");
+                menuToggle.setAttribute("aria-expanded", isOpen);
+            });
+        }
 
-  if (submenuToggle && hasSub) {
-    submenuToggle.addEventListener("click", () => {
-      hasSub.classList.toggle("open");
-    });
-  }
-</script>
-
+        if (submenuToggle && hasSub) {
+            submenuToggle.addEventListener("click", () => {
+                const isOpen = hasSub.classList.toggle("open");
+                submenuToggle.setAttribute("aria-expanded", isOpen);
+            });
+        }
+    </script>
 
 </body>
 </html>
