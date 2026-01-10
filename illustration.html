@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>Illustration｜Laugh Maker</title>
-        <meta name="description" content="Laugh Makerのイラスト・デザイン制作実績ページです。">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Illustration｜Laugh Maker</title>
+    <meta name="description" content="Laugh Makerのイラスト・デザイン制作実績ページです。">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
+<body>
 
-        <!-- ハンバーガーボタン -->
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <!-- ハンバーガーメニュー（buttonに変更：アクセシビリティ対応） -->
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="メニューを開く"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        <!-- グローバルメニュー -->
-        <nav class="global-menu" id="globalMenu">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="https://laughmaker.theshop.jp/" target="_blank">SHOP ↗</a></li>
-                <li><a href="illustration.html">Illustration</a></li>
-                <li><a href="engineering.html">Web Design</a></li>
-                <li><a href="3ddesign.html">3D Design</a></li>
+    <!-- グローバルナビゲーション -->
+    <nav class="global-menu" id="globalMenu" aria-label="グローバルナビゲーション">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
 
-                <li class="has-sub">
-                    <button class="submenu-toggle">お見積もり</button>
-                    <ul class="submenu">
-                        <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
-                        <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
-                        <li><span class="disabled">3D制作（準備中）</span></li>
-                    </ul>
-                </li>
+            <!-- 外部リンクはセキュリティ対策で rel を追加 -->
+            <li>
+                <a href="https://laughmaker.theshop.jp/" target="_blank" rel="noopener noreferrer">
+                    SHOP ↗
+                </a>
+            </li>
 
-                <li><a href="contact.html">その他のご相談 / お問い合わせ</a></li>
-            </ul>
-        </nav>
+            <li><a href="illustration.html">Illustration</a></li>
+            <li><a href="engineering.html">Web Design</a></li>
+            <li><a href="3ddesign.html">3D Design</a></li>
 
-        <div class="container">
-            <header>
+            <!-- サブメニュー -->
+            <li class="has-sub">
+                <button
+                    class="submenu-toggle"
+                    aria-expanded="false">
+                    お見積もり
+                </button>
+
+                <ul class="submenu">
+                    <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
+                    <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
+                    <li><span class="disabled">3D制作（準備中）</span></li>
+                </ul>
+            </li>
+
+            <li><a href="contact.html">その他のご相談 / お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- main を追加：ページの主コンテンツ -->
+        <main>
+
+            <!-- ページヘッダー -->
+            <header class="page-header">
                 <h1>Illustration & Design</h1>
                 <p>イラスト・デザイン制作</p>
             </header>
 
+            <!-- 制作実績グリッド -->
             <section>
                 <div class="grid">
-                    <img src="images/illust1.JPG" alt="イラスト作品1">
-                    <img src="images/illust2.PNG" alt="イラスト作品2">
-                    <img src="images/illust3.PNG" alt="イラスト作品3">
-                    <img src="images/illust4.PNG" alt="イラスト作品4">
-                    <img src="images/illust6.JPG" alt="イラスト作品6">
-                    <img src="images/illust7.jpg" alt="イラスト作品7">
-                    <img src="images/illust8.jpg" alt="イラスト作品8">
-                    <img src="images/illust9.PNG" alt="イラスト作品9">
-                    <img src="images/illust10.PNG" alt="イラスト作品10">
+                    <!-- figure化：将来キャプション・モーダル対応しやすく -->
+                    <figure><img src="images/illust1.JPG" alt="イラスト作品1"></figure>
+                    <figure><img src="images/illust2.PNG" alt="イラスト作品2"></figure>
+                    <figure><img src="images/illust3.PNG" alt="イラスト作品3"></figure>
+                    <figure><img src="images/illust4.PNG" alt="イラスト作品4"></figure>
+                    <figure><img src="images/illust6.JPG" alt="イラスト作品6"></figure>
+                    <figure><img src="images/illust7.jpg" alt="イラスト作品7"></figure>
+                    <figure><img src="images/illust8.jpg" alt="イラスト作品8"></figure>
+                    <figure><img src="images/illust9.PNG" alt="イラスト作品9"></figure>
+                    <figure><img src="images/illust10.PNG" alt="イラスト作品10"></figure>
                 </div>
             </section>
 
-            <section style="margin-top:64px;">
+            <!-- 説明セクション -->
+            <section class="section-gap">
                 <h2>イラスト制作について</h2>
                 <p>
                     Webサイト・SNS・印刷物など、用途に合わせたイラスト制作を行っています。<br>
@@ -71,6 +96,7 @@
                 </p>
             </section>
 
+            <!-- 料金 -->
             <section>
                 <h2>料金目安</h2>
                 <ul>
@@ -78,7 +104,7 @@
                         <strong>Web・SNS用イラスト／挿絵・アイコン</strong><br>
                         ¥8,000〜15,000 / 点
                     </li>
-
+                    
                     <li>
                         <strong>メインビジュアル（Webトップ・キービジュアル等）</strong><br>
                         ¥15,000〜25,000 / 点
@@ -89,14 +115,15 @@
                         +¥5,000〜10,000 / 点
                     </li>
                 </ul>
-                <p style="margin-top:24px; color:#555;">
+                <p class="note">
                     ※ 商用利用込みの価格です。<br>
                     ※ 二次利用・大幅な内容変更が発生する場合は別途ご相談となります。
                 </p>
             </section>
 
+            <!-- 修正回数 -->
             <section>
-            <h2>修正について</h2>
+                <h2>修正について</h2>
                 <p>
                     修正は<strong>5回まで</strong>とさせていただいております。<br>
                     これは際限なく修正を重ねることで制作期間が長期化し、<br>
@@ -108,37 +135,50 @@
                 </p>
             </section>
 
-            <section>
-                <p style="margin-top:32px;">
+            <!-- CTA -->
+            <section class="cta">
+                <h2 class="visually-hidden">お問い合わせ</h2>
+                <p class="cta-text">
                     ご依頼・ご相談はお気軽にお問い合わせください。
                 </p>
                 <a class="button" href="contact.html">依頼・相談する</a>
             </section>
 
-            <footer>
-                <a href="index.html">← トップへ戻る</a>
-            </footer>
+        </main>
 
-        </div>
+        <!-- フッター -->
+        <footer>
+            <a href="index.html">← トップへ戻る</a>
+        </footer>
 
-        <script>
-            const menuToggle = document.getElementById("menuToggle");
-            const globalMenu = document.getElementById("globalMenu");
-            const submenuToggle = document.querySelector(".submenu-toggle");
-            const hasSub = document.querySelector(".has-sub");
+    </div>
 
-            if (menuToggle && globalMenu) {
-                menuToggle.addEventListener("click", () => {
-                menuToggle.classList.toggle("active");
+    <!-- メニュー制御JS -->
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const globalMenu = document.getElementById("globalMenu");
+        const submenuToggle = document.querySelector(".submenu-toggle");
+        const hasSub = document.querySelector(".has-sub");
+
+        if (menuToggle && globalMenu) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = menuToggle.classList.toggle("active");
                 globalMenu.classList.toggle("active");
-                });
-            }
 
-            if (submenuToggle && hasSub) {
-                submenuToggle.addEventListener("click", () => {
-                hasSub.classList.toggle("open");
-                });
-            }
-        </script>
-    </body>
+                // aria状態更新
+                menuToggle.setAttribute("aria-expanded", isOpen);
+            });
+        }
+
+        if (submenuToggle && hasSub) {
+            submenuToggle.addEventListener("click", () => {
+                const isOpen = hasSub.classList.toggle("open");
+
+                // aria状態更新
+                submenuToggle.setAttribute("aria-expanded", isOpen);
+            });
+        }
+    </script>
+
+</body>
 </html>
