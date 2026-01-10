@@ -516,3 +516,15 @@ footer {
   color: #aaa;
   font-size: 0.95rem;
 }
+
+.more-link {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.more-link a {
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+}
