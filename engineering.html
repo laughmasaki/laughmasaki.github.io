@@ -10,43 +10,48 @@
 
 <body class="engineering-bg">
 
-    <!-- ハンバーガーボタン -->
-    <div class="menu-toggle" id="menuToggle">
+  <!-- ハンバーガーメニュー（モバイル用） -->
+  <div class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
     <span></span>
     <span></span>
     <span></span>
-    </div>
+  </div>
 
-    <!-- グローバルメニュー -->
-    <nav class="global-menu" id="globalMenu">
+  <!-- グローバルナビゲーション -->
+  <nav class="global-menu" id="globalMenu">
     <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="https://laughmaker.theshop.jp/" target="_blank">SHOP ↗</a></li>
-        <li><a href="illustration.html">Illustration</a></li>
-        <li><a href="engineering.html">Web Design</a></li>
-        <li><a href="3ddesign.html">3D Design</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="https://laughmaker.theshop.jp/" target="_blank" rel="noopener">SHOP ↗</a></li>
+      <li><a href="illustration.html">Illustration</a></li>
 
-        <li class="has-sub">
-        <button class="submenu-toggle">お見積もり</button>
+      <!-- 現在ページ -->
+      <li><a href="engineering.html" aria-current="page">Web Design</a></li>
+
+      <li><a href="3ddesign.html">3D Design</a></li>
+
+      <li class="has-sub">
+        <button class="submenu-toggle" type="button">お見積もり</button>
         <ul class="submenu">
-            <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
-            <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
-            <li><span class="disabled">3D制作（準備中）</span></li>
+          <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
+          <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
+          <li><span class="disabled">3D制作（準備中）</span></li>
         </ul>
-        </li>
+      </li>
 
-        <li><a href="contact.html">その他のご相談 / お問い合わせ</a></li>
+      <li><a href="contact.html">その他のご相談 / お問い合わせ</a></li>
     </ul>
-    </nav>
+  </nav>
 
   <div class="container">
 
+    <!-- ページヘッダー -->
     <header class="page-header">
       <h1>Web Design</h1>
       <img src="images/webtop.png" alt="Web Design ヘッダー画像" class="header-image">
       <p>Web制作・開発</p>
     </header>
 
+    <!-- 対応内容 -->
     <section>
       <h2>対応内容</h2>
       <ul>
@@ -58,176 +63,146 @@
       </ul>
     </section>
 
-    <!-- ▼ ここから追加ブロック -->
+    <!-- 制作フロー -->
     <section>
-  <h2>制作・運用の流れ</h2>
-  <details>
-  <summary>制作の流れを見る</summary>
-  <ol class="flow-list">
+      <h2>制作・運用の流れ</h2>
 
-    <li>
-      <strong>ヒアリング</strong><br>
-      Google Formを通じて、ご依頼内容・ご要望を詳しくお伺いします。
-    </li>
+      <details>
+        <summary>制作の流れを見る</summary>
 
-    <li>
-      <strong>個人情報取扱への同意</strong><br>
-      電子署名用のGoogle Formをお送りします。<br>
-      内容をご確認の上、同意・署名をお願いいたします。
-    </li>
+        <ol class="flow-list">
+          <li>
+            <strong>ヒアリング</strong><br>
+            Google Formを通じて、ご依頼内容・ご要望を詳しくお伺いします。
+          </li>
 
-    <li>
-      <strong>簡易イメージ・お見積もり</strong><br>
-      ご要望をもとに、ベースとなる簡易イメージページを作成します。<br>
-      制作の方向性が固まり次第、正式なお見積もりをご提示します。
-    </li>
+          <li>
+            <strong>個人情報取扱への同意</strong><br>
+            電子署名用のGoogle Formをお送りします。<br>
+            内容をご確認の上、同意・署名をお願いいたします。
+          </li>
 
-    <li>
-      <strong>ご契約・着手金のお支払い</strong><br>
-      お見積もり内容にご同意いただけましたら契約書にサインをいただき、<br>
-      制作費の30％を着手金としてお支払いいただきます。
-    </li>
+          <li>
+            <strong>簡易イメージ・お見積もり</strong><br>
+            簡易イメージページを作成し、方向性確定後に正式なお見積もりをご提示します。
+          </li>
 
-    <li>
-      <strong>制作・修正対応</strong><br>
-      制作開始後、進捗共有と修正対応を行います。<br>
-      修正は<strong>最大5回まで</strong>対応いたします。
-    </li>
+          <li>
+            <strong>ご契約・着手金のお支払い</strong><br>
+            契約締結後、制作費の30％を着手金としてお支払いいただきます。
+          </li>
 
-    <li>
-      <strong>納品・残金のお支払い</strong><br>
-      完成後、内容をご確認いただき問題がなければ、<br>
-      残り70％のお支払い確認後に納品となります。
-    </li>
+          <li>
+            <strong>制作・修正対応</strong><br>
+            進捗共有を行いながら、<strong>最大5回まで</strong>修正対応します。
+          </li>
 
-  <p style="margin-top: 24px; color: #555; font-size: 0.9rem;">
-    ※ 修正回数を設けている理由は、際限なく修正依頼をお受けすることで、<br>
-    他のご依頼者さまの制作スケジュールに影響が出てしまうリスクを回避するためです。<br>
-    限られた回数の中で、丁寧にご要望を反映いたします。
-  </p>
-  </ol>
-  </details>
-</section>
+          <li>
+            <strong>納品・残金のお支払い</strong><br>
+            残金70％のお支払い確認後、正式納品となります。
+          </li>
+        </ol>
 
-<section>
-  <h2>制作プラットフォームについて</h2>
-  <p>
-    本サービスでは、<strong>GitHub Pages を利用した静的Webサイト制作</strong>を行っています。<br>
-    個人事業・小規模サイトにおいて、
-    「低コスト」「高速表示」「高い安全性」を重視した構成です。
-  </p>
-  <p>
-    サーバー契約や複雑な管理が不要なため、
-    初めてWebサイトを持つ方にも安心してご利用いただけます。
-  </p>
-</section>
+        <p style="margin-top: 24px; color: #555; font-size: 0.9rem;">
+          ※ 修正回数を設けている理由は、制作品質とスケジュールを安定させるためです。
+        </p>
+      </details>
+    </section>
 
-<section>
-  <h2>お見積もりの目安</h2>
+    <!-- プラットフォーム説明 -->
+    <section>
+      <h2>制作プラットフォームについて</h2>
+      <p>
+        <strong>GitHub Pages を利用した静的Webサイト制作</strong>を行っています。<br>
+        低コスト・高速表示・高い安全性を重視した構成です。
+      </p>
+      <p>
+        サーバー契約や複雑な管理が不要なため、
+        初めてWebサイトを持つ方にも安心してご利用いただけます。
+      </p>
+    </section>
 
-  <p>
-    制作費用はサイトの規模や内容により異なりますが、<br>
-    以下はあくまで<strong>目安となるモデルケース</strong>です。
-  </p>
+    <!-- 料金目安 -->
+    <section>
+      <h2>お見積もりの目安</h2>
 
-  <ul>
-    <li>
-      <strong>シンプルプラン（1〜2ページ）</strong><br>
-      30,000円〜50,000円<br>
-      <small>例：LP / 簡易紹介ページ</small>
-    </li>
+      <ul>
+        <li>
+          <strong>シンプルプラン（1〜2ページ）</strong><br>
+          30,000円〜50,000円
+        </li>
 
-    <li>
-      <strong>スタンダードプラン（3〜5ページ）</strong><br>
-      50,000円〜100,000円<br>
-      <small>例：事業紹介・ポートフォリオサイト</small>
-    </li>
+        <li>
+          <strong>スタンダードプラン（3〜5ページ）</strong><br>
+          50,000円〜100,000円
+        </li>
 
-    <li>
-      <strong>カスタムプラン</strong><br>
-      内容に応じて個別お見積もり<br>
-      <small>API連携・更新機能・構成提案を含む場合</small>
-    </li>
-  </ul>
+        <li>
+          <strong>カスタムプラン</strong><br>
+          内容に応じて個別お見積もり
+        </li>
+      </ul>
 
-  <p style="margin-top: 24px; color: #555; font-size: 0.9rem;">
-    ※ ページ数、デザイン調整、原稿作成の有無、<br>
-    運用サポート（月額サブスクリプション）などにより金額は前後します。<br>
-    正式なお見積もりはヒアリング後にご提示いたします。
-  </p>
-</section>
+      <p style="margin-top: 24px; color: #555; font-size: 0.9rem;">
+        ※ 正式なお見積もりはヒアリング後にご提示いたします。
+      </p>
+    </section>
 
-<section>
-  <h2>月額サブスクリプション（運用サポート）</h2>
+    <!-- 運用サポート -->
+    <section>
+      <h2>月額サブスクリプション（運用サポート）</h2>
 
-  <p>
-    Webサイト公開後の軽微な修正・更新・運用相談を、<br>
-    月額制でサポートするプランです。
-  </p>
+      <ul>
+        <li>月額 5,000円（税込）</li>
+        <li>軽微な修正・更新対応</li>
+        <li>レイアウト調整・改善提案</li>
+        <li>メールによる運用相談</li>
+      </ul>
 
-  <ul>
-    <li>月額 5,000円（税込）</li>
-    <li>テキスト修正・画像差し替えなど軽微な更新対応</li>
-    <li>小規模なレイアウト調整・改善提案</li>
-    <li>メールによる運用相談</li>
-  </ul>
+      <h3>解約・返金について</h3>
+      <p>
+        サブスクリプションはいつでも解約可能です。<br>
+        当方不備による返金はStripe経由で対応します。
+      </p>
+    </section>
 
-  <h3>解約・返金について</h3>
-  <p>
-    サブスクリプションはいつでも解約可能です。<br>
-    解約手続き後、次回以降の請求は発生しません。
-  </p>
-
-  <p>
-    当方の不備・手違いにより返金が必要と判断される場合は、<br>
-    Stripeを通じてクレジットカードへ返金いたします。<br>
-    返金は通常5〜10営業日以内にカード会社経由で反映されます。
-  </p>
-
-  <p style="font-size: 0.85rem; color: #666;">
-    ※ お客さま都合による返金は原則としてお受けしておりません。
-  </p>
-</section>
-
-    <!-- ▲ 追加ここまで -->
-
+    <!-- CTA -->
     <section>
       <h2>ご依頼について</h2>
       <p>
-        技術的な説明が分からなくても問題ありません。<br>
-        制作内容・ご予算・納期などをお伺いした上で、
-        最適な形をご提案します。<br>
+        技術的な知識がなくても問題ありません。<br>
         まずはお気軽にご相談ください。
       </p>
       <a class="button" href="https://forms.gle/DaeQj9J2bSWTWiDC7">Googleフォームを開く</a>
     </section>
 
     <footer>
-      <a href="index.html">← トップへ戻る</a>
+      <a href="index.html">← トップへ戻る</a><br>
       © Laugh Creators Studio
     </footer>
 
   </div>
 
-<script>
-  const menuToggle = document.getElementById("menuToggle");
-  const globalMenu = document.getElementById("globalMenu");
-  const submenuToggle = document.querySelector(".submenu-toggle");
-  const hasSub = document.querySelector(".has-sub");
+  <!-- メニュー制御スクリプト（存在チェック付き） -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const globalMenu = document.getElementById("globalMenu");
+    const submenuToggle = document.querySelector(".submenu-toggle");
+    const hasSub = document.querySelector(".has-sub");
 
-  if (menuToggle && globalMenu) {
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
-      globalMenu.classList.toggle("active");
-    });
-  }
+    if (menuToggle && globalMenu) {
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        globalMenu.classList.toggle("active");
+      });
+    }
 
-  if (submenuToggle && hasSub) {
-    submenuToggle.addEventListener("click", () => {
-      hasSub.classList.toggle("open");
-    });
-  }
-</script>
+    if (submenuToggle && hasSub) {
+      submenuToggle.addEventListener("click", () => {
+        hasSub.classList.toggle("open");
+      });
+    }
+  </script>
 
 </body>
 </html>

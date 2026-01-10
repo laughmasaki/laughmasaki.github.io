@@ -2,115 +2,126 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>3D Design | Laugh Creators Studio</title>
+  <title>3D Design｜Laugh Creators Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- ハンバーガーボタン -->
-    <div class="menu-toggle" id="menuToggle">
-    <span></span>
-    <span></span>
-    <span></span>
-    </div>
 
-    <!-- グローバルメニュー -->
-    <nav class="global-menu" id="globalMenu">
+  <!-- ハンバーガーメニュー（モバイル用） -->
+  <div class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- グローバルナビゲーション -->
+  <nav class="global-menu" id="globalMenu">
     <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="https://laughmaker.theshop.jp/" target="_blank">SHOP ↗</a></li>
-        <li><a href="illustration.html">Illustration</a></li>
-        <li><a href="engineering.html">Web Design</a></li>
-        <li><a href="3ddesign.html">3D Design</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li>
+        <a href="https://laughmaker.theshop.jp/" target="_blank" rel="noopener">
+          SHOP ↗
+        </a>
+      </li>
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="engineering.html">Web Design</a></li>
 
-        <li class="has-sub">
-        <button class="submenu-toggle">お見積もり</button>
+      <!-- 現在ページ -->
+      <li><a href="3ddesign.html" aria-current="page">3D Design</a></li>
+
+      <li class="has-sub">
+        <button class="submenu-toggle" type="button">お見積もり</button>
         <ul class="submenu">
-            <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
-            <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
-            <li><span class="disabled">3D制作（準備中）</span></li>
+          <li><a href="https://forms.gle/dmg7U8ZJMYqMUSJC9">イラスト制作</a></li>
+          <li><a href="https://forms.gle/TrStkqckfmHhm9Ch6">Web制作</a></li>
+          <li><span class="disabled">3D制作（準備中）</span></li>
         </ul>
-        </li>
+      </li>
 
-        <li><a href="contact.html">その他のご相談 / お問い合わせ</a></li>
+      <li><a href="contact.html">その他のご相談 / お問い合わせ</a></li>
     </ul>
-    </nav>
+  </nav>
 
   <div class="container">
 
-    <!-- Header -->
+    <!-- ヒーローヘッダー -->
     <header class="hero">
       <div class="hero-text">
-        <h1>3D Design<br>
-            （只今修行中・・・）</h1>
+        <h1>
+          3D Design<br>
+          <span style="font-size: 0.8em;">（只今修行中・・・）</span>
+        </h1>
+
         <p class="catch">
           イラストレーターさまの<br>
           オリジナルキャラクターを<br>
-          blenderを使って３D化いたします。
+          Blenderを使って3D化いたします。
         </p>
       </div>
     </header>
 
-    <!-- About -->
+    <!-- できること -->
     <section>
       <h2>できること</h2>
       <p>
-        商品イメージ、コンセプトビジュアル、簡易アニメーションなど、
-        目的に応じた3Dデザインを制作します。
+        商品イメージ、コンセプトビジュアル、簡易アニメーションなど、<br>
+        目的に応じた3Dデザインを制作します。<br>
         Web・SNS・資料用など幅広く対応可能です。
       </p>
     </section>
 
-    <!-- Works -->
+    <!-- 制作実績（準備中） -->
     <section>
       <h2>Works</h2>
 
       <div class="grid">
-        <img src="images/3d_01.png" alt="Coming soon">
-        <img src="images/3d_02.png" alt="Coming soon">
-        <img src="images/3d_03.png" alt="Coming soon">
-        <img src="images/3d_04.png" alt="Coming soon">
+        <img src="images/3d_01.png" alt="3D作品サンプル（準備中）">
+        <img src="images/3d_02.png" alt="3D作品サンプル（準備中）">
+        <img src="images/3d_03.png" alt="3D作品サンプル（準備中）">
+        <img src="images/3d_04.png" alt="3D作品サンプル（準備中）">
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- 依頼案内（現在停止中） -->
     <section>
       <h2>ご依頼について</h2>
       <p>
-        現在ご依頼者様のご要望にお応えできるよう<br>
-        絶賛修業を積んでおります<br>
-        もう暫くお待ち下さい。
+        現在、より高い品質でご要望にお応えできるよう<br>
+        制作スキル向上に注力しております。<br>
+        準備が整い次第、正式にご案内いたします。
       </p>
     </section>
 
-    <!-- Footer -->
+    <!-- フッター -->
     <footer>
-      <a href="index.html">← トップへ戻る</a>
+      <a href="index.html">← トップへ戻る</a><br>
       © Laugh Creators Studio
     </footer>
 
   </div>
 
-<script>
-  const menuToggle = document.getElementById("menuToggle");
-  const globalMenu = document.getElementById("globalMenu");
-  const submenuToggle = document.querySelector(".submenu-toggle");
-  const hasSub = document.querySelector(".has-sub");
+  <!-- ナビゲーション制御スクリプト（存在チェック付き） -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const globalMenu = document.getElementById("globalMenu");
+    const submenuToggle = document.querySelector(".submenu-toggle");
+    const hasSub = document.querySelector(".has-sub");
 
-  if (menuToggle && globalMenu) {
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
-      globalMenu.classList.toggle("active");
-    });
-  }
+    if (menuToggle && globalMenu) {
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        globalMenu.classList.toggle("active");
+      });
+    }
 
-  if (submenuToggle && hasSub) {
-    submenuToggle.addEventListener("click", () => {
-      hasSub.classList.toggle("open");
-    });
-  }
-</script>
+    if (submenuToggle && hasSub) {
+      submenuToggle.addEventListener("click", () => {
+        hasSub.classList.toggle("open");
+      });
+    }
+  </script>
 
 </body>
 </html>

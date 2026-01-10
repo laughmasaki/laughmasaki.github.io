@@ -1,6 +1,6 @@
-/* =========================
-   Base
-========================= */
+/* =================================================
+   Base / Reset
+================================================= */
 * {
   box-sizing: border-box;
 }
@@ -13,21 +13,36 @@ body {
                "Noto Sans JP", sans-serif;
   line-height: 1.7;
   color: #222;
-  background: #ffffff;
+  background: #fff;
 }
 
-/* =========================
+/* =================================================
    Layout
-========================= */
+================================================= */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 64px 24px;
 }
 
-/* =========================
-   Hero Section
-========================= */
+section {
+  margin-bottom: 72px;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000;
+}
+
+section p {
+  max-width: 720px;
+}
+
+/* =================================================
+   Hero
+================================================= */
 .hero {
   display: flex;
   flex-direction: column;
@@ -36,18 +51,10 @@ body {
   padding: 64px 32px;
   margin-bottom: 64px;
 
-  background: linear-gradient(
-    135deg,
-    #fafafa 0%,
-    #f1f1f1 100%
-  );
-
+  background: linear-gradient(135deg, #fafafa 0%, #f1f1f1 100%);
   border-radius: 24px;
 }
 
-/* =========================
-   Hero Text
-========================= */
 .hero-text {
   text-align: center;
   max-width: 520px;
@@ -66,9 +73,9 @@ body {
   color: #333;
 }
 
-/* =========================
+/* =================================================
    Owner Info
-========================= */
+================================================= */
 .owner {
   font-size: 0.85rem;
   color: #666;
@@ -84,9 +91,9 @@ body {
   text-decoration: underline;
 }
 
-/* =========================
-   Hero Buttons
-========================= */
+/* =================================================
+   Buttons
+================================================= */
 .hero-buttons {
   display: flex;
   gap: 16px;
@@ -94,9 +101,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* =========================
-   Buttons（完全固定）
-========================= */
 .button {
   display: flex;
   align-items: center;
@@ -105,13 +109,12 @@ body {
   width: 160px;
   height: 44px;
 
-  white-space: nowrap;
-
   background: #222;
   color: #fff;
   text-decoration: none;
   border-radius: 999px;
   font-size: 0.9rem;
+  white-space: nowrap;
 
   transition: opacity 0.2s ease;
 }
@@ -120,37 +123,9 @@ body {
   opacity: 0.75;
 }
 
-/* =========================
-   Sections
-========================= */
-section {
-  margin-bottom: 72px;
-}
-
-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #000;
-}
-
-section p {
-  max-width: 720px;
-}
-
-/* =========================
-   Footer
-========================= */
-footer {
-  padding-top: 48px;
-  border-top: 1px solid #eee;
-  font-size: 0.8rem;
-  color: #888;
-}
-
-/* =========================
-   Illustration Grid
-========================= */
+/* =================================================
+   Grid / Images
+================================================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -164,9 +139,9 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* =========================
-   Image Slider
-========================= */
+/* =================================================
+   Slider
+================================================= */
 .slider {
   position: relative;
   width: 100%;
@@ -191,9 +166,9 @@ footer {
   opacity: 1;
 }
 
-/* =========================
+/* =================================================
    Topics
-========================= */
+================================================= */
 #topics-list {
   list-style: none;
   padding: 0;
@@ -218,13 +193,9 @@ footer {
   background: #f7f7f7;
 }
 
-/* =========================
+/* =================================================
    Access / Map
-========================= */
-.access {
-  margin-bottom: 72px;
-}
-
+================================================= */
 .access-text {
   margin-bottom: 24px;
   color: #555;
@@ -236,195 +207,61 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* =========================
-   Responsive（PC）
-========================= */
-@media (min-width: 768px) {
-  .hero {
-    flex-direction: row;
-    justify-content: center;
-    gap: 64px;
-    padding: 80px 64px;
-  }
-
-  .hero-text {
-    text-align: left;
-  }
-
-  .hero-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 160px);
-    grid-auto-rows: 44px;
-    gap: 16px 24px;
-    justify-content: start;
-  }
-
-  .slider {
-    max-width: 420px;
-  }
-
-  .map iframe {
-    height: 420px;
-  }
-}
-
-/* =========================
-   Responsive（Mobile）
-========================= */
-@media (max-width: 600px) {
-  .container {
-    padding: 48px 20px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-}
-/* =========================
-   Flow List（工程）
-========================= */
-
-.flow-list {
-  list-style: none;
-  padding-left: 1.5em; /* 番号の余白 */
-  margin-top: 24px;
-}
-
-/* 各工程 */
-.flow-list li {
-  position: relative;
-
-  /* アイコン分の横余白 */
-  padding-left: 120px;
-
-  /* アイコン分の縦余白 */
-  min-height: 96px;
-  margin-bottom: 48px;
-
-  line-height: 1.7;
-}
-
-/* 共通アイコン設定 */
-.flow-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  width: 96px;
-  height: 96px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-/* 工程別アイコン */
-.flow-list li:nth-child(1)::before {
-  background-image: url("../images/zu1.png");
-}
-
-.flow-list li:nth-child(2)::before {
-  background-image: url("../images/zu2.png");
-}
-
-.flow-list li:nth-child(3)::before {
-  background-image: url("../images/zu3.png");
-}
-
-.flow-list li:nth-child(4)::before {
-  background-image: url("../images/zu4.png");
-}
-
-.flow-list li:nth-child(5)::before {
-  background-image: url("../images/zu5.png");
-}
-
-.flow-list li:nth-child(6)::before {
-  background-image: url("../images/zu6.png");
-}
-
-/* =========================
-   Mobile調整
-========================= */
-@media (max-width: 600px) {
-  .flow-list li {
-    padding-left: 88px;
-    min-height: 72px;
-    margin-bottom: 32px;
-  }
-
-  .flow-list li::before {
-    width: 64px;
-    height: 64px;
-  }
-}
-/* =========================
+/* =================================================
    Page Header
-========================= */
+================================================= */
 .page-header {
   text-align: center;
   margin-bottom: 64px;
 }
 
-/* ヘッダー画像 */
 .header-image {
   width: 100%;
-  max-width: 520px;   /* ← ここで「少し小さく」制御 */
-  height: auto;      /* ← 縦横比を保持（トリミングなし） */
+  max-width: 520px;
+  height: auto;
   margin-bottom: 24px;
 }
 
-/* =========================
-   Engineering Background（Mobile）
-========================= */
-  .engineering-bg {
-    background-image:
-      linear-gradient(
-        rgba(255,255,255,0.65),
-        rgba(255,255,255,0.65)
-      ),
-      url("../images/webback.png");
-
-    background-repeat: repeat-y;
-    background-position: left top;
-    background-size: 80px auto; /* ← ここが横幅調整ポイント */
- }
-
-/* =========================
-   Engineering Background（PC）
-========================= */
-@media (min-width: 768px) {
-  .engineering-bg {
-    background-image:
-      /* 白グラデーション（一番上） */
-      linear-gradient(
-        rgba(255,255,255,0.25),
-        rgba(255,255,255,0.25)
-      ),
-      /* 左背景 */
-      url("../images/webback.png"),
-      /* 右背景 */
-      url("../images/webback.png");
-
-    background-repeat:
-      no-repeat,
-      repeat-y,
-      repeat-y;
-
-    background-position:
-      left top,
-      left top,
-      right top;
-
-    background-size:
-      auto,
-      280px auto,
-      280px auto;
-  }
+/* =================================================
+   Flow List（工程）
+================================================= */
+.flow-list {
+  list-style: none;
+  padding-left: 1.5em;
+  margin-top: 24px;
 }
 
-/* ハンバーガー */
+.flow-list li {
+  position: relative;
+  padding-left: 120px;
+  min-height: 96px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+.flow-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 96px;
+  height: 96px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* アイコン割当 */
+.flow-list li:nth-child(1)::before { background-image: url("../images/zu1.png"); }
+.flow-list li:nth-child(2)::before { background-image: url("../images/zu2.png"); }
+.flow-list li:nth-child(3)::before { background-image: url("../images/zu3.png"); }
+.flow-list li:nth-child(4)::before { background-image: url("../images/zu4.png"); }
+.flow-list li:nth-child(5)::before { background-image: url("../images/zu5.png"); }
+.flow-list li:nth-child(6)::before { background-image: url("../images/zu6.png"); }
+
+/* =================================================
+   Navigation（Hamburger）
+================================================= */
 .menu-toggle {
   position: fixed;
   top: 24px;
@@ -443,7 +280,6 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* ×に変形 */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -454,7 +290,7 @@ footer {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* メニュー本体 */
+/* メニュー */
 .global-menu {
   position: fixed;
   inset: 0;
@@ -481,7 +317,6 @@ footer {
   transition: all 0.4s ease;
 }
 
-/* 順番に表示 */
 .global-menu.active li {
   opacity: 1;
   transform: translateY(0);
@@ -490,22 +325,17 @@ footer {
 .global-menu a,
 .submenu-toggle {
   font-size: 1.4rem;
-  text-decoration: none;
   color: #000;
   background: none;
   border: none;
+  text-decoration: none;
   cursor: pointer;
 }
 
-/* サブメニュー */
 .submenu {
   margin-top: 12px;
   padding-left: 16px;
   display: none;
-}
-
-.submenu li {
-  margin-bottom: 12px;
 }
 
 .has-sub.open .submenu {
@@ -517,14 +347,89 @@ footer {
   font-size: 0.95rem;
 }
 
+/* =================================================
+   External Link（Instagram）
+================================================= */
 .more-link {
-    margin-top: 24px;
-    text-align: center;
+  margin-top: 24px;
+  text-align: center;
 }
 
 .more-link a {
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+/* =================================================
+   Engineering Background
+================================================= */
+.engineering-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
+    url("../images/webback.png");
+  background-repeat: repeat-y;
+  background-position: left top;
+  background-size: 80px auto;
+}
+
+/* =================================================
+   Responsive
+================================================= */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    gap: 64px;
+    padding: 80px 64px;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 160px);
+    gap: 16px 24px;
+  }
+
+  .slider {
+    max-width: 420px;
+  }
+
+  .map iframe {
+    height: 420px;
+  }
+
+  .engineering-bg {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
+      url("../images/webback.png"),
+      url("../images/webback.png");
+    background-repeat: no-repeat, repeat-y, repeat-y;
+    background-position: left top, left top, right top;
+    background-size: auto, 280px auto, 280px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 48px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .flow-list li {
+    padding-left: 88px;
+    min-height: 72px;
+    margin-bottom: 32px;
+  }
+
+  .flow-list li::before {
+    width: 64px;
+    height: 64px;
+  }
 }
