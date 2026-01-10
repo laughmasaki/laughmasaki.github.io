@@ -392,19 +392,34 @@ footer {
  }
 
 /* =========================
-   Engineering Background(PC)
+   Engineering Background（PC）
 ========================= */
 @media (min-width: 768px) {
   .engineering-bg {
     background-image:
+      /* 白グラデーション（一番上） */
       linear-gradient(
         rgba(255,255,255,0.05),
         rgba(255,255,255,0.05)
       ),
+      /* 左背景 */
+      url("../images/webback.png"),
+      /* 右背景 */
       url("../images/webback.png");
 
-    background-repeat: repeat-y;
-    background-position: right top;
-    background-size: 540px auto; /* ← ここが横幅調整ポイント */
+    background-repeat:
+      no-repeat,
+      repeat-y,
+      repeat-y;
+
+    background-position:
+      left top,
+      left top,
+      right top;
+
+    background-size:
+      auto,
+      180px auto,
+      180px auto;
   }
 }
