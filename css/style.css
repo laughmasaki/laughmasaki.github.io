@@ -378,7 +378,6 @@ footer {
 /* =========================
    Engineering Background（Mobile）
 ========================= */
-.engineering-bg {
   .engineering-bg {
     background-image:
       linear-gradient(
@@ -391,10 +390,9 @@ footer {
     background-position: left top;
     background-size: 240px auto; /* ← ここが横幅調整ポイント */
  }
-}
 
 /* =========================
-   Engineering Background
+   Engineering Background(PC)
 ========================= */
 @media (min-width: 768px) {
   .engineering-bg {
