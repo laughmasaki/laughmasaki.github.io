@@ -259,9 +259,9 @@ section p {
 .flow-list li:nth-child(5)::before { background-image: url("../images/zu5.png"); }
 .flow-list li:nth-child(6)::before { background-image: url("../images/zu6.png"); }
 
-/* =================================================
-   Navigation（Hamburger）
-================================================= */
+/* =========================
+   Hamburger Menu
+========================= */
 .menu-toggle {
   position: fixed;
   top: 24px;
@@ -280,72 +280,19 @@ section p {
   transition: all 0.3s ease;
 }
 
+/* × に変形 */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .menu-toggle.active span:nth-child(2) {
   opacity: 0;
 }
+
 .menu-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* メニュー */
-.global-menu {
-  position: fixed;
-  inset: 0;
-  background: rgba(255,255,255,0.96);
-  transform: translateX(100%);
-  transition: transform 0.4s ease;
-  z-index: 1000;
-  padding: 80px 40px;
-}
-
-.global-menu.active {
-  transform: translateX(0);
-}
-
-.global-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.global-menu li {
-  margin-bottom: 24px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.4s ease;
-}
-
-.global-menu.active li {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.global-menu a,
-.submenu-toggle {
-  font-size: 1.4rem;
-  color: #000;
-  background: none;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.submenu {
-  margin-top: 12px;
-  padding-left: 16px;
-  display: none;
-}
-
-.has-sub.open .submenu {
-  display: block;
-}
-
-.disabled {
-  color: #aaa;
-  font-size: 0.95rem;
-}
 
 /* =================================================
    External Link（Instagram）
