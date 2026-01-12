@@ -411,3 +411,19 @@ section p {
     height: 64px;
   }
 }
+
+/* =========================
+   Illustration Grid（Mobile調整）
+========================= */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .grid img {
+    width: auto;        /* 100%拡大を解除 */
+    max-width: 100%;    /* はみ出し防止 */
+    margin: 0 auto;     /* 中央寄せ */
+    display: block;
+  }
+}
