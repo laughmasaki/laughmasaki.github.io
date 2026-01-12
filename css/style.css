@@ -325,6 +325,26 @@ section p {
   transform: translateY(-12px) rotate(-45deg);
 }
 
+/* =========================
+   Sub Menu（お見積もり）
+========================= */
+
+/* 初期状態：必ず非表示 */
+.submenu {
+  display: none;
+  margin-top: 12px;
+  padding-left: 16px;
+}
+
+/* 開いたときだけ表示 */
+.has-sub.open .submenu {
+  display: block;
+}
+
+/* サブメニュー項目 */
+.submenu li {
+  margin-bottom: 12px;
+  
 /* =================================================
    External Link（Instagram）
 ================================================= */
