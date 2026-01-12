@@ -260,6 +260,29 @@ section p {
 .flow-list li:nth-child(6)::before { background-image: url("../images/zu6.png"); }
 
 /* =========================
+   Global Menu（初期状態）
+========================= */
+.global-menu {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(255,255,255,0.96);
+
+  transform: translateX(100%);   /* ← 必ず閉じて始める */
+  transition: transform 0.4s ease;
+
+  z-index: 1000;
+
+  pointer-events: none;          /* ← 開いてない時は操作不可 */
+}
+
+/* 開いた状態 */
+.global-menu.active {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* =========================
    Hamburger Menu（完成版）
 ========================= */
 .menu-toggle {
