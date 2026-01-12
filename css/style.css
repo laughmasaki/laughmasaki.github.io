@@ -260,29 +260,38 @@ section p {
 .flow-list li:nth-child(6)::before { background-image: url("../images/zu6.png"); }
 
 /* =========================
-   Hamburger Menu
+   Hamburger Menu（完成版）
 ========================= */
 .menu-toggle {
   position: fixed;
   top: 24px;
   right: 24px;
+
   width: 32px;
-  height: 24px;
+  height: 28px;                 /* ← span3本が収まる高さに修正 */
+
+  display: flex;                /* ← margin配置をやめる */
+  flex-direction: column;
+  justify-content: space-between;
+
   cursor: pointer;
   z-index: 1001;
 }
 
+/* 3本線 */
 .menu-toggle span {
   display: block;
+  width: 100%;
   height: 3px;
   background: #000;
-  margin: 5px 0;
+
+  margin: 0;                    /* ← はみ出しの元凶を完全排除 */
   transition: all 0.3s ease;
 }
 
 /* × に変形 */
 .menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: translateY(12px) rotate(45deg);
 }
 
 .menu-toggle.active span:nth-child(2) {
@@ -290,9 +299,8 @@ section p {
 }
 
 .menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: translateY(-12px) rotate(-45deg);
 }
-
 
 /* =================================================
    External Link（Instagram）
