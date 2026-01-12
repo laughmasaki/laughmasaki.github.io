@@ -181,25 +181,21 @@
   </div>
 
   <!-- メニュー制御スクリプト（存在チェック付き） -->
-  <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const globalMenu = document.getElementById("globalMenu");
-    const submenuToggle = document.querySelector(".submenu-toggle");
-    const hasSub = document.querySelector(".has-sub");
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const globalMenu = document.getElementById("globalMenu");
 
-    if (menuToggle && globalMenu) {
-      menuToggle.addEventListener("click", () => {
-        menuToggle.classList.toggle("active");
-        globalMenu.classList.toggle("active");
-      });
-    }
+  if (menuToggle && globalMenu) {
+    // 初期状態を強制的に閉じる
+    menuToggle.classList.remove("active");
+    globalMenu.classList.remove("active");
 
-    if (submenuToggle && hasSub) {
-      submenuToggle.addEventListener("click", () => {
-        hasSub.classList.toggle("open");
-      });
-    }
-  </script>
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      globalMenu.classList.toggle("active");
+    });
+  }
+</script>
 
 </body>
 </html>
