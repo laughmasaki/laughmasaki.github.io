@@ -122,6 +122,20 @@ section p {
 .button:hover {
   opacity: 0.75;
 }
+/* =========================
+   Hero Buttons（共通）
+========================= */
+.hero-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列固定 */
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.hero-buttons .button {
+  text-align: center;
+  padding: 12px 0;
+}
 
 /* =================================================
    Grid / Images
@@ -326,25 +340,36 @@ section p {
 }
 
 /* =========================
-   Sub Menu（お見積もり）
+   Submenu（初期は閉じる）
 ========================= */
-
-/* 初期状態：必ず非表示 */
-.submenu {
+.has-sub .submenu {
   display: none;
-  margin-top: 12px;
+  margin-top: 8px;
   padding-left: 16px;
 }
 
-/* 開いたときだけ表示 */
-.has-sub.open .submenu {
+/* 開いた状態 */
+.has-sub.active .submenu {
   display: block;
 }
 
-/* サブメニュー項目 */
-.submenu li {
-  margin-bottom: 12px;
-  
+/* 見た目 */
+.submenu-toggle {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 0;
+  width: 100%;
+  text-align: left;
+}
+
+/* 無効項目 */
+.submenu .disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
 /* =================================================
    External Link（Instagram）
 ================================================= */

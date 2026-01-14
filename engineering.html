@@ -179,23 +179,31 @@
     </footer>
 
   </div>
+    <!-- メニュー制御 -->
+    <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const globalMenu = document.getElementById("globalMenu");
+    const submenuToggle = document.querySelector(".submenu-toggle");
+    const hasSub = document.querySelector(".has-sub");
 
-  <!-- メニュー制御スクリプト（存在チェック付き） -->
-<script>
-  const menuToggle = document.getElementById("menuToggle");
-  const globalMenu = document.getElementById("globalMenu");
+    /* ハンバーガー */
+    if (menuToggle && globalMenu) {
+        menuToggle.classList.remove("active");
+        globalMenu.classList.remove("active");
 
-  if (menuToggle && globalMenu) {
-    // 初期状態を強制的に閉じる
-    menuToggle.classList.remove("active");
-    globalMenu.classList.remove("active");
+        menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        globalMenu.classList.toggle("active");
+        });
+    }
 
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
-      globalMenu.classList.toggle("active");
-    });
-  }
-</script>
+    /* お見積もりサブメニュー */
+    if (submenuToggle && hasSub) {
+        submenuToggle.addEventListener("click", () => {
+        hasSub.classList.toggle("active");
+        });
+    }
+    </script>
 
 </body>
 </html>
